@@ -13,19 +13,24 @@
 #include "BitSizeDef.H"
 
 _64bits byteSizeFor( _64bits bits);
-void init(void* bregister);
-void shfitLtoH(void* bregister,unsigned int sh);
-void shfitHtoL(void* bregister,unsigned int sh);
-int getBit(void* bregister,unsigned int index);
-int setBit(void* bregister,unsigned int index);
+void init(void* bregister, _64bits bits);
+
+
+void shfitLtoH(void* bregister,_64bits sh);
+void shfitHtoL(void* bregister,_64bits sh);
+int getBit(void* bregister,_64bits index);
+int setBit(void* bregister,_64bits index);
 void a(void* dst,void* src);
 void o(void* dst,void* src);
 void x(void* dst,void* src);
 void c(void* dst,void* src);
 void n(void* dst);
 unsigned int testZero(void *src);
+
+
 unsigned long byteSize(void *src);
-unsigned char byteAt(void *src,unsigned int index);
+unsigned char byteAt(void *src,_64bits index);
+
 
 
 
